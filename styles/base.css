@@ -1,12 +1,15 @@
-:root {
-    color: black;
-    background-color: white;
+header {
+    background-color: rgb(60, 128, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 3px solid rgba(172, 24, 24, 0.1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header,
+main {
+    margin: 0 auto;
 }
 
 body {
@@ -14,39 +17,59 @@ body {
 }
 
 h1 {
-    color: beige;
     font-family: "Jost", sans-serif;
-    font-weight: 800;
-    background-color: purple;
+    font-size: 2rem;
     text-align: center;
-    padding: 2em;
+    text-decoration: underline;
 }
 
-footer {
+h2 {
+    background-color: rgb(60, 128, 60);
     color: beige;
-    background-color: purple;
+    margin: 0px;
     text-align: center;
-    padding: 2em;
 }
 
-
-section {
-    display: grid;
-    place-items: center;
+nav {
+    background-color: #36454f;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-.icon {
-    max-width: 80px;
-}
-
-ul li {
+li,
+nav ul {
     list-style-type: none;
 }
 
-picture img {
+nav a {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: auto;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: aqua;
+}
+
+.active {
+    color: yellow;
+}
+
+.icon {
+    max-width: 2em;
+}
+
+.card {
+    border: 1px solid #bbb;
+    margin: 1em;
+}
+
+footer {
+    background-color: rgb(60, 128, 60);
+    color: beige;
+    text-align: center;
+    padding: 1em;
 }
