@@ -1,39 +1,43 @@
 header {
-    background-color: rgb(60, 128, 60);
+    background-color: #A0937D;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     border: 3px solid rgba(172, 24, 24, 0.1);
+    border-radius: 8px;
 }
 
-header,
-main {
-    margin: 0 auto;
-}
 
 body {
     font-family: "Raleway", sans-serif;
 }
 
-h1 {
+h1,
+.name {
     font-family: "Jost", sans-serif;
     font-size: 2rem;
     text-align: center;
     text-decoration: underline;
 }
 
+.name {
+    color: black;
+}
+
 h2 {
-    background-color: rgb(60, 128, 60);
+    background-color: #A0937D;
     color: beige;
     margin: 0px;
     text-align: center;
+    border-radius: 8px;
 }
 
 nav {
-    background-color: #36454f;
+    background-color: #474246;
     margin: 0 auto;
     max-width: 800px;
+    border-radius: 8px;
 }
 
 li,
@@ -49,9 +53,12 @@ nav a {
     text-decoration: none;
 }
 
+li a:hover,
 nav a:hover {
     text-decoration: underline;
-    background-color: aqua;
+    background-color: #E7D4B5;
+    color: black;
+    border-radius: 8px;
 }
 
 .active {
@@ -65,11 +72,26 @@ nav a:hover {
 .card {
     border: 1px solid #bbb;
     margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 30px #333;
+}
+
+.information {
+    text-align: center;
 }
 
 footer {
-    background-color: rgb(60, 128, 60);
-    color: beige;
+    background-color: #A0937D;
+    border-radius: 8px;
+    color: black;
     text-align: center;
     padding: 1em;
+}
+
+
+.profilePic {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 30px #777;
+    margin: 10px;
 }

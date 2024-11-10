@@ -3,7 +3,11 @@
         position: relative;
         height: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .activities {
+        grid-column: 1/3;
     }
 
     nav ul {
@@ -14,11 +18,5 @@
         flex: 1 1 100%;
     }
 
-    .activities {
-        grid-column: 1/2;
-    }
 
-    .information {
-        grid-template-columns: 2/3
-    }
 }
