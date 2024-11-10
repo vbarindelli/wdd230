@@ -81,9 +81,10 @@ nav a:hover {
 }
 
 footer {
-    background-color: #A0937D;
+
+    background-color: #474246;
     border-radius: 8px;
-    color: black;
+    color: white;
     text-align: center;
     padding: 1em;
 }
