@@ -1,0 +1,54 @@
+:root {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    background-color: white;
+}
+
+header {
+    background-color: #F8A31A;
+    padding-top: 2em;
+
+}
+
+h1,
+#titleFont {
+    margin-left: 1em;
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
+    font-size: 4em;
+    font-style: normal;
+    text-align: center;
+}
+
+h2 {
+    background-color: rgb(189, 55, 55);
+    color: beige;
+    text-align: center;
+    font-weight: 500;
+    font-style: normal;
+}
+
+picture img {
+    display: block;
+    max-width: 600px;
+    margin: 1em auto;
+}
+
+
+
+footer {
+    background-color: #272635;
+    padding: 1em;
+    color: beige;
+    text-align: center;
+}
+
+
+p {
+    text-align: center;
+    margin: 0 auto;
+}
