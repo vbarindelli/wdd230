@@ -144,11 +144,8 @@ footer {
     color: rgb(195, 195, 252)
 }
 
-.dark-mode img {
-    border-radius: 8px;
-    border: 1px solid #ccc;
+.dark-mode .profilePic {
     box-shadow: 0 0 10px #777;
-    margin: 10px;
     opacity: 75%;
 }
 
