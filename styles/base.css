@@ -89,7 +89,7 @@ footer {
 }
 
 
-.profilePic {
+img {
     border-radius: 8px;
     border: 1px solid #ccc;
     box-shadow: 0 0 30px #777;
@@ -144,7 +144,7 @@ footer {
     color: rgb(195, 195, 252)
 }
 
-.dark-mode .profilePic {
+.dark-mode img {
     box-shadow: 0 0 10px #777;
     opacity: 75%;
 }
@@ -155,4 +155,61 @@ footer {
 
 .dark-mode #menu.open::before {
     content: "✖";
+}
+
+.dark-mode .herolabel p {
+    color: #000;
+}
+
+main {
+    max-width: 960px;
+    margin: auto;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.herolabel {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: radial-gradient(#fff, #A0937D);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.75;
+}
+
+.herolabel p {
+    margin: 0;
+    padding: .25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.iframe {
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #333;
 }

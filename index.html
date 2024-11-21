@@ -30,7 +30,7 @@
         💡/🕶️
     </div>
     <header>
-        <img class="profilePic" id="photo" src="images/virginiaProfile-min.jpg" alt="Virginia profile pic" width="122"
+        <img class="profilePic" id="photo" src="images/virginiaProfile-min.webp" alt="Virginia profile pic" width="122"
             height="162">
         <span class="name">Virginia Haedo</span>
     </header>
@@ -44,6 +44,15 @@
         </ul>
     </nav>
     <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <img src="images/hero-medium.webp" alt="Buenos Aires Temple" width="1500" height="750px">
+            </picture>
+            <div class="herolabel">
+                <p>Buenos Aires, Argentina Temple</p>
+            </div>
+        </div>
         <h1>WDD 230: Web Frontend Development</h1>
         <div class="container">
             <section class="card activities">
@@ -57,8 +66,9 @@
                             href="https://vbarindelli.github.io/wdd230/week02/bom.html">DOM Manipulation | </a></li>
                     <li>Week 3:<a href="week03/images/landscape-small.webp"> WebP | </a><a
                             href="https://vbarindelli.github.io/wdd230/week03/lazyload.html"> Lazy Load | </a><a
-                            href="https://vbarindelli.github.io/wdd230/week03/responsive-images.html"> Responsive Images| </a><a
-                            href="https://vbarindelli.github.io/wdd230/week03/bom.html"> Web Storage API| </a>
+                            href="https://vbarindelli.github.io/wdd230/week03/responsive-images.html"> Responsive
+                            Images| </a><a href="https://vbarindelli.github.io/wdd230/week03/bom.html"> Web Storage API
+                            | </a>
                     </li>
                     <li>Week 4: <a href="#"></a></li>
                 </ul>
@@ -67,18 +77,27 @@
                 <h2>Information</h2>
                 <ul>
                     <li>Malaga, Spain</li>
-                    <li><img class="icon" src="images/sunny_icon.svg" alt="Sun and cloud icon."> Temperature: 24 C° -
+                    <li><img class="icon" src="images/sunny_icon.svg" alt="Sun and cloud icon." loading="lazy">
+                        Temperature: 24 C° -
                         Cloudy
                     </li>
                     <li> Page Visits: 13</li>
                 </ul>
             </section>
         </div>
+        <div class="iframe">
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51170.89540741005!2d-4.4904663638351625!3d36.71821490104375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7259c44fdb212d%3A0x6025dc92c9ca32cf!2zTcOhbGFnYQ!5e0!3m2!1ses!2ses!4v1732186103088!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </main>
+
     <footer>
         <p>©<span id="currentyear"></span> - Virginia Haedo, Spain <img class="icon"
                 src="images/spain-country-flag-icon-sm.jpg" alt="Spain Flag icon."></p>
         <p><span id="lastModified"></span></p>
+        <span class="label">Number of visits: </span><span class="visits"></span></p>
     </footer>
 
 </body>
