@@ -6,6 +6,7 @@
 
 main {
     background-color: white;
+
 }
 
 header {
@@ -84,11 +85,6 @@ a:hover {
     content: "\00d7";
 }
 
-section {
-    display: grid;
-    place-items: center;
-}
-
 h2 {
     background-color: rgb(189, 55, 55);
     color: beige;
@@ -122,7 +118,7 @@ footer {
 
 section {
     margin: auto;
-    border: 5px solid rgba(0, 0, 0, 0.1);
+
     max-width: 520px;
     border-radius: 8px;
 }
@@ -157,4 +153,13 @@ a {
     font-weight: 700;
     transition: 0.5s;
     font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.interest {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+
+.card{
+    border: 5px solid rgba(0, 0, 0, 0.1);
 }

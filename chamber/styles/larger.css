@@ -72,4 +72,21 @@
         padding: 4em;
     }
 
+    .container-discover {
+        display: grid;
+        grid-column: 1fr 1fr 1fr;
+
+    }
+
+    .images {
+        grid-column: 2/4;
+        grid-row: 1/8;
+    }
+
+    .information {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+
 }
