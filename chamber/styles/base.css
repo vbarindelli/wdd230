@@ -118,7 +118,6 @@ footer {
 
 section {
     margin: auto;
-
     max-width: 520px;
     border-radius: 8px;
 }
@@ -160,6 +159,14 @@ a {
     box-shadow: 0 0 30px #333;
 }
 
-.card{
-    border: 5px solid rgba(0, 0, 0, 0.1);
+.card {
+    border: 5px solid rgba(5, 5, 5, 0.1);
+    padding: 1em;
+}
+
+.container-discover img {
+    width: 100%;
+    height: auto;
+    margin: 1.5em 1em 0 1em;
+    padding: 1em;
 }
