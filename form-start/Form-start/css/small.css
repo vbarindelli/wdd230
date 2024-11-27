@@ -121,7 +121,7 @@ main {
 
 .wf1 input[type="submit"] {
     border: none;
-    background-image: linear-gradient(#9c2c13, #6f200e);
+    background-image: linear-gradient(#34753f, #1a331a);
     color: #fff;
     border-radius: 6px;
     padding: .8rem;
