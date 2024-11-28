@@ -8,7 +8,6 @@ header {
     border-radius: 8px;
 }
 
-
 body {
     font-family: "Raleway", sans-serif;
 }
@@ -24,15 +23,6 @@ h1,
 .name {
     color: black;
 }
-
-h2 {
-    background-color: #A0937D;
-    color: black;
-    margin: 0px;
-    text-align: center;
-    border-radius: 8px;
-}
-
 
 .navigation {
     display: flex;
@@ -65,20 +55,6 @@ li a:hover,
     border-radius: 8px;
 }
 
-.icon {
-    max-width: 2em;
-}
-
-.card {
-    border: 1px solid #bbb;
-    margin: 1em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #333;
-}
-
-.information {
-    text-align: center;
-}
 
 footer {
     background-color: #393838;
@@ -87,7 +63,6 @@ footer {
     text-align: center;
     padding: 1em;
 }
-
 
 img {
     border-radius: 8px;
@@ -157,60 +132,107 @@ img {
     content: "✖";
 }
 
-.dark-mode .herolabel p {
-    color: #000;
-}
 
 main {
     max-width: 960px;
     margin: auto;
 }
 
-.hero {
-    position: relative;
+
+label {
+    display: block;
 }
 
-.hero img {
+#rating {
+    width: 180px;
+    margin-bottom: 0;
+}
+
+#rangevalue {
+    font-size: 2rem;
+    color: navy;
+}
+
+#rangevalues {
+    display: flex;
+    margin: 0 0 0 25px;
+    width: 1em;
+}
+
+#rangevalues option {
+    flex: 1 1 auto;
+}
+
+option[value="1"] {
+    margin-left: -1.5em;
+}
+
+option[value="5"] {
+    margin-left: 3em;
+}
+
+option[value="10"] {
+    margin-left: 4em;
+}
+
+.dark-mode #rangevalue {
+    color: #fff;
+}
+
+.wf1 fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.wf1 legend {
+    color: #445ba9;
+    padding: 0 .5rem;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: .9rem;
+}
+
+.wf1 div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+}
+
+.wf1 input[type="text"],
+.wf1 input[type="password"],
+.wf1 input[type="email"] {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
     width: 100%;
-    height: auto;
+    max-width: 400px;
+    appearance: none;
 }
 
-.herolabel {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background: radial-gradient(#fff, #A0937D);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 0 3rem #fff;
-    opacity: 0.75;
+.wf1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#A0937D, #393838);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #999;
 }
 
-.herolabel p {
-    margin: 0;
-    padding: .25rem;
-    font-weight: 700;
-    font-size: 1.5rem;
+.wf1 input:required {
+    border-right: solid 8px red;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+.wf1 input:required:valid {
+    border-right: solid 8px green;
 }
-
-.iframe {
-    text-align: center;
-}
-
-#map {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #333;
-}
-

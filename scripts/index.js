@@ -43,3 +43,5 @@ modeButton.addEventListener("click", () => {
 	profilePic.classList.toggle('dark-mode');
 	button.classList.toggle('dark-mode');
 });
+
+
