@@ -1,17 +1,22 @@
+:root {
+    font-family: "Raleway", sans-serif;
+    color: black;
+    --border-radius: 8px;
+    --background1: #A0937D;
+    --background2: #393838;
+
+}
+
 header {
-    background-color: #A0937D;
+    background-color: var(--background1);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     border: 3px solid rgba(172, 24, 24, 0.1);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
-
-body {
-    font-family: "Raleway", sans-serif;
-}
 
 h1,
 .name {
@@ -21,16 +26,12 @@ h1,
     text-decoration: underline;
 }
 
-.name {
-    color: black;
-}
 
 h2 {
-    background-color: #A0937D;
-    color: black;
+    background-color: var(--background1);
     margin: 0px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 
@@ -38,10 +39,10 @@ h2 {
     display: flex;
     flex-direction: column;
     list-style: none;
-    background-color: #393838;
+    background-color: var(--background2);
     margin: 0 auto;
     max-width: 800px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 li,
@@ -61,8 +62,7 @@ li a:hover,
 .navigation a:hover {
     text-decoration: underline;
     background-color: #E7D4B5;
-    color: black;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .icon {
@@ -72,7 +72,7 @@ li a:hover,
 .card {
     border: 1px solid #bbb;
     margin: 1em;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 10px #333;
 }
 
@@ -81,8 +81,8 @@ li a:hover,
 }
 
 footer {
-    background-color: #393838;
-    border-radius: 8px;
+    background-color: var(--background2);
+    border-radius: var(--border-radius);
     color: white;
     text-align: center;
     padding: 1em;
@@ -90,14 +90,14 @@ footer {
 
 
 img {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: 1px solid #ccc;
     box-shadow: 0 0 30px #777;
     margin: 10px;
 }
 
 .active {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 10px #d3d2d2;
     background-color: #5f5f5f;
 }
@@ -179,8 +179,8 @@ main {
     position: absolute;
     top: 30px;
     left: 30px;
-    background: radial-gradient(#fff, #A0937D);
-    border-radius: 8px;
+    background: radial-gradient(#fff, var(--background1));
+    border-radius: var(--border-radius);
     padding: 1.5rem;
     box-shadow: 0 0 3rem #fff;
     opacity: 0.75;
@@ -212,7 +212,7 @@ main {
 #map {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 10px #333;
 }
 
@@ -297,7 +297,7 @@ option[value="10"] {
 
 .wf1 input[type="submit"] {
     border: none;
-    background-image: linear-gradient(#A0937D, #393838);
+    background-image: linear-gradient(var(--background1), var(--background2));
     color: #fff;
     border-radius: 6px;
     padding: .8rem;
