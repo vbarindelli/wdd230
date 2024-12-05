@@ -186,8 +186,9 @@ label {
 }
 
 .wf1 fieldset {
-    margin: 2rem 0;
+    margin: 2rem 0 0 2em;
     border: 1px solid #ddd;
+    box-shadow: 1px 1px 4px #999;
     border-radius: 6px;
     padding: .5rem 2%;
     width: 100%;
@@ -199,6 +200,7 @@ label {
 .wf1 legend {
     color: black;
     padding: 0 .5rem;
+    text-align: center;
 }
 
 .wf1 label {
@@ -208,16 +210,11 @@ label {
     font-size: .9rem;
 }
 
-.wf1 div {
-    padding-top: 1rem;
-    color: #445ba9;
-    font-size: .9rem;
-}
 
 .wf1 input[type="text"],
 .wf1 input[type="tel"],
 .wf1 input[type="email"] {
-    background-color: #eee;
+    background-color: #fcecd2;
     display: block;
     border: solid 1px #999;
     border-radius: 6px;
@@ -235,7 +232,7 @@ label {
     border-radius: 6px;
     padding: .8rem;
     max-width: 400px;
-    margin: -1rem 2% 2rem 2%;
+    margin: 1em 0 1em 15em;
     box-shadow: 1px 1px 4px #999;
 }
 

@@ -37,11 +37,13 @@ if (lastVisitObj) {
 }
 
 const welcomeMsgElement = document.querySelector("#lastVisit");
-welcomeMsgElement.innerHTML = welcomeMsg;
+if (welcomeMsgElement) {
+    welcomeMsgElement.innerHTML = welcomeMsg;
+}
 
 
 localStorage.setItem("lastVisitDate", Date.now());
 
-let timestamp = document.querySelector("#timestamp");
-timestamp.value = new Date();
+let tmps = document.querySelector("#timeS");
+tmps.value = today.getFullYear();
 
