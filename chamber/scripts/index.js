@@ -20,6 +20,7 @@ hamburger.addEventListener('click', () => {
 let welcomeMsg = "Welcome! Let us know if you have any questions.";
 lastVisitObj = window.localStorage.getItem("lastVisitDate");
 
+
 //TEST validations:
 //lastVisitObj = null;
 //lastVisitObj = new Date(Date.UTC(1, 1, 1));
@@ -39,6 +40,8 @@ const welcomeMsgElement = document.querySelector("#lastVisit");
 welcomeMsgElement.innerHTML = welcomeMsg;
 
 
-
-
 localStorage.setItem("lastVisitDate", Date.now());
+
+let timestamp = document.querySelector("#timestamp");
+timestamp.value = new Date();
+

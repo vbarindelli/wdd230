@@ -101,5 +101,18 @@
         filter: grayscale(0);
     }
 
+    #containerJoin {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wf1 {
+        grid-column: 1/2;
+    }
+
+    #benefits {
+        display: inline-table;
+        grid-column: 2/3;
+    }
 
 }
