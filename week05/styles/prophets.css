@@ -1,0 +1,84 @@
+:root {
+    font-family: "Raleway", sans-serif;
+    color: black;
+    --border-radius: 8px;
+    --background1: #A0937D;
+    --background2: #393838;
+
+}
+
+header,
+main,
+footer {
+    margin: 1rem;
+    position: relative;
+}
+
+h1 {
+    border-bottom: 1px solid #eee;
+    text-shadow: 0 0 15px #777;
+    width: 60%;
+}
+
+h2 {
+    color: navy;
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid #bbb;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    color: #333;
+    margin: 7px 0 5px 0;
+}
+
+p {
+    margin: 0;
+}
+
+main {
+    margin-left: 2rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+section {
+    margin: 0.25rem;
+    padding: 1.5rem;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section>p {
+    min-height: 60px;
+}
+
+img {
+    width: auto;
+    max-width: 325px;
+    box-shadow: 0 0 30px #777;
+    height: 200px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0.3em;
+}
+
+li>img {
+    width: auto;
+    height: 30px;
+}
+
+footer {
+    border-top: 1px solid #555;
+    padding: 20px;
+}
