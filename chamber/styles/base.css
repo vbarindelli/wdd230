@@ -15,6 +15,7 @@
 main {
     background-color: white;
 
+
 }
 
 header {
@@ -185,6 +186,10 @@ label {
     display: block;
 }
 
+#containerJoin {
+    min-width: 400px;
+}
+
 .wf1 fieldset {
     margin: 2rem 0 0 2em;
     border: 1px solid #ddd;
@@ -192,7 +197,8 @@ label {
     border-radius: 6px;
     padding: .5rem 2%;
     width: 100%;
-    max-width: 40em;
+    max-width: 500px;
+    min-width: 400px;
     height: auto;
 
 }

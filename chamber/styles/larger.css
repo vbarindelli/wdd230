@@ -103,7 +103,7 @@
 
     #containerJoin {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr, minmax(0 400px);
     }
 
     .wf1 {
