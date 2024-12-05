@@ -103,7 +103,7 @@
 
     #containerJoin {
         display: grid;
-        grid-template-columns: 1fr 1fr, minmax(0 400px);
+        grid-template-columns: minmax(0, 700px) minmax(0, 600px);
     }
 
     .wf1 {
@@ -113,6 +113,7 @@
     #benefits {
         display: inline-table;
         grid-column: 2/3;
+        align-items: right;
     }
 
 }
