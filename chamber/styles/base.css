@@ -198,9 +198,14 @@ label {
 }
 
 .wf1 legend {
-    color: black;
+    color: beige;
     padding: 0 .5rem;
-    text-align: center;
+    text-align: left;
+    border: 1px solid#272635;
+    border-radius: 6px;
+    background-color: var(--back);
+    font-size: larger;
+    padding: .5em;
 }
 
 .wf1 label {

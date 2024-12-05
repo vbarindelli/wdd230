@@ -45,5 +45,5 @@ if (welcomeMsgElement) {
 localStorage.setItem("lastVisitDate", Date.now());
 
 let tmps = document.querySelector("#timeS");
-tmps.value = today.getFullYear();
+tmps.value = today;
 
