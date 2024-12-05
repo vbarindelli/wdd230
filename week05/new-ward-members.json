@@ -1,0 +1,33 @@
+{
+    "familyName": "Barindelli",
+    "moveIn": 2016,
+    "famMem": 5,
+    "visited": true,
+    "members": [
+        {
+            "name": "Sergio",
+            "gender": "male",
+            "birthdate": "03/31/1987"
+        },
+        {
+            "name": "Virginia",
+            "gender": "female",
+            "birthdate": "07/05/1985"
+        },
+        {
+            "name": "Emilia",
+            "gender": "female",
+            "birthdate": "01/06/2013"
+        },
+        {
+            "name": "Federico",
+            "gender": "male",
+            "birthdate": "02/27/2015"
+        },
+        {
+            "name": "Amparo",
+            "gender": "female",
+            "birthdate": "14/03/2017"
+        }
+    ]
+}
