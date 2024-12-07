@@ -1,0 +1,32 @@
+{
+    "members": [
+        {
+            "name": "Ilusiones",
+            "address": "New Av. 1234 Tw Argentina",
+            "phone": "54 11 3445 2352",
+            "url": "https://www.instagram.com/lenceriailusiones.trelew/",
+            "image": "https://www.google.com/imgres?q=lencer%C3%ADa%20ilusiones%20trelew&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D100063700674073&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Flenceriailusiones.trelew%2F%3Flocale%3Des_LA&docid=cblTW-oOuaJwTM&tbnid=tjONtMbOsm9OJM&vet=12ahUKEwj5jbaZpZaKAxUVA9sEHSpNJfcQM3oECF0QAA..i&w=320&h=320&hcb=2&ved=2ahUKEwj5jbaZpZaKAxUVA9sEHSpNJfcQM3oECF0QAA",
+            "level": "Gold",
+            "area": "Apparel"
+        },
+        {
+            "name": "Papeleria Delphi",
+            "address": " Av. Plutarco, 6, Puerto de la Torre, 29010 Málaga",
+            "phone": "663 13 97 38",
+            "url": "https://www.instagram.com/delphipapeleria/?hl=es",
+            "image": "https://www.google.com/imgres?q=papeleria%20malaga%20delphi&imgurl=https%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN2FX1_tkBMCvn133NyRj4fGKHKxpxvedDFfx82%3Dw397-h298-k-no&imgrefurl=https%3A%2F%2Fpapeleriatecnicacano.es%2Fpapeleria-delphi%2F&docid=-hKYAXPW_4HvRM&tbnid=JMgTOdrXJ4DLpM&vet=12ahUKEwiu_vbCppaKAxUOBNsEHX8jBKoQM3oECBIQAA..i&w=397&h=298&hcb=2&ved=2ahUKEwiu_vbCppaKAxUOBNsEHX8jBKoQM3oECBIQAA",
+            "level": "Silver",
+            "area": "Stationary"
+        },
+        {
+            "name": "Mercería De Mil Labores",
+            "address": "C. Píndaro, 7, local 3, Puerto de la Torre, 29010 Málaga",
+            "phone": "951 13 25 67",
+            "url": "https://www.facebook.com/profile.php?id=100061828157350",
+            "image": "https://www.facebook.com/photo/?fbid=483327487071519&set=a.483327450404856",
+            "level": "Bronze",
+            "area": "Haberdashery"
+        }
+       
+    ]
+}

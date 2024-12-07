@@ -1,30 +1,38 @@
 const baseURL = "https://vbarindelli.github.io/wdd230/";
 const linksURL = "https://vbarindelli.github.io/wdd230/data/links.json";
-const weeks = document.querySelector(".weekDesc");
+const weeksId = document.querySelector('#weekDesc');
+const line = document.querySelector('#weekLine');
 
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    displayLinks(data);
+    console.log(data);
+    displayLinks(data.weeks);
 }
 
-getLinks();
+getLinks(linksURL);
 
-function displayLinks(weeks) {
+const displayLinks = (weeks) => {
+
     weeks.forEach((week) => {
         // Create elements to add to the div.cards element
-        let week = document.createElement('li');
+        let weekLine = document.createElement('li');
+        weekLine.setAttribute('id', 'weekLine');
 
-        week.links.forEach(link => {
+
+        week.links.forEach((link) => {
             let actLink = document.createElement('a'); // fill in the blank
-            actLink.setAttribute('src', link.url);
-            actLink.textContent = `${link.title}`;;
-            week.appendChild(actLink);
+
+            actLink.setAttribute('href', link.url);
+            actLink.innerText = `${link.title}`;
+            line.appendChild(actLink);
         });
 
-        // Build the image portrait by setting all the relevant attributes
-        week.setAttribute('src', week.links);
 
-        weeks.appendChild(week);
+        weekLine.setAttribute('src', week.links);
+        weekLine.textContent = `${week.week}: `;
+
+        weeksId.appendChild(weekLine);
     }); // end of arrow function and forEach loop
 }
+

@@ -2,6 +2,8 @@ const year = document.querySelector("#currentyear");
 const today = new Date();
 const msToDays = 86400000;
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
+const url = '';
+const cards = document.querySelector('#cards');
 
 
 
@@ -21,9 +23,6 @@ let welcomeMsg = "Welcome! Let us know if you have any questions.";
 lastVisitObj = window.localStorage.getItem("lastVisitDate");
 
 
-//TEST validations:
-//lastVisitObj = null;
-//lastVisitObj = new Date(Date.UTC(1, 1, 1));
 if (lastVisitObj) {
     let lastVisitDate = new Date(Number(lastVisitObj));
     let todayDate = Date.now();
