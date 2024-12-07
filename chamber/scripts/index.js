@@ -2,7 +2,7 @@ const year = document.querySelector("#currentyear");
 const today = new Date();
 const msToDays = 86400000;
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-const url = '';
+const url = 'https://vbarindelli.github.io/wdd230/chamber/data/members.json';
 const cards = document.querySelector('#cards');
 
 
@@ -43,6 +43,46 @@ if (welcomeMsgElement) {
 
 localStorage.setItem("lastVisitDate", Date.now());
 
-let tmps = document.querySelector("#timeS");
-tmps.value = today;
+// let tmps = document.querySelector("#timeS");
+// tmps.value = today;
+
+async function getMemberData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.table(data.members);
+    displayMembers(data.members);
+}
+
+getMemberData(url);
+
+const displayMembers = (members) => {
+    members.forEach((member) => {
+        let card = document.createElement('section');
+        // let name = document.createElement('h2');
+        let memberImg = document.createElement('img');
+        let address = document.createElement('p');
+        let phone = document.createElement('p');
+        let memberUrl = document.createElement('a');
+
+        memberImg.setAttribute('src', member.image);
+        memberImg.setAttribute('alt', `corporate image of ${member.name}`);
+        memberImg.setAttribute('loading', 'lazy');
+        memberImg.setAttribute('width', '340');
+        memberImg.setAttribute('height', '440');
+
+        address.textContent = `${member.address}`;
+        phone.textContent = `${member.phone}`;
+        memberUrl.setAttribute('href', member.url);
+        memberUrl.innerText = `${member.url}`;
+
+        card.appendChild(memberImg);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(memberUrl);
+
+        cards.appendChild(card);
+
+
+    })
+}
 
