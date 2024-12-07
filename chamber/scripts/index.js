@@ -3,7 +3,11 @@ const today = new Date();
 const msToDays = 86400000;
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 const url = 'https://vbarindelli.github.io/wdd230/chamber/data/members.json';
-const cards = document.querySelector('#cards');
+const cards = document.querySelector('.cards');
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+
+
 
 
 
@@ -58,24 +62,28 @@ getMemberData(url);
 const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement('section');
-        // let name = document.createElement('h2');
+        let name = document.createElement('h3');
         let memberImg = document.createElement('img');
         let address = document.createElement('p');
         let phone = document.createElement('p');
         let memberUrl = document.createElement('a');
 
+        card.setAttribute('class', 'memberSection');
         memberImg.setAttribute('src', member.image);
         memberImg.setAttribute('alt', `corporate image of ${member.name}`);
         memberImg.setAttribute('loading', 'lazy');
         memberImg.setAttribute('width', '340');
         memberImg.setAttribute('height', '440');
+        memberImg.setAttribute('class', 'memberImg');
 
+        name.textContent = `${member.name}`
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;
         memberUrl.setAttribute('href', member.url);
         memberUrl.innerText = `${member.url}`;
 
         card.appendChild(memberImg);
+        card.appendChild(name);
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(memberUrl);
@@ -84,5 +92,18 @@ const displayMembers = (members) => {
 
 
     })
+}
+
+gridbutton.addEventListener("click", () => {
+    // example using arrow function
+    cards.classList.add("grid");
+    cards.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+    cards.classList.add("list");
+    cards.classList.remove("grid");
 }
 
