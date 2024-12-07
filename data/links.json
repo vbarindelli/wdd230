@@ -1,0 +1,101 @@
+{
+    "weeks": [
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week01/holygrail.html",
+                    "title": "Layout"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week01/media-query.html",
+                    "title": "Media Query"
+                },
+                {
+                    "url": "https://codepen.io/vbarindelli/pen/WNVaJMe",
+                    "title": "JS Pen"
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week02/design.html",
+                    "title": "Web Design"
+                },
+                {
+                    "url": "https://codepen.io/vbarindelli/pen/mdNvRvP",
+                    "title": "Responsive Menu"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week02/bom.html",
+                    "title": "DOM Manipulation"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/images/landscape-small.webp",
+                    "title": "WebP"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week03/lazyload.html",
+                    "title": "Lazy Load"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week03/responsive-images.html",
+                    "title": "Responsive Images"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week03/bom.html",
+                    "title": "Web Storage API"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "https://codepen.io/vbarindelli/pen/XJrreyx",
+                    "title": "CSS Pseudo-Classes"
+                },
+                {
+                    "url": "images/combinators.webp",
+                    "title": "Combinators"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week04/tablebuild.html",
+                    "title": "Tables"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/form-start/Form-start/index.html",
+                    "title": "Forms"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "https://codepen.io/vbarindelli/pen/EaYPpjW",
+                    "title": "CSS Pseudo-Elements"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week05/new-ward-members.json",
+                    "title": "JSON"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week05/prophets.html",
+                    "title": "Fetch API"
+                },
+                {
+                    "url": "https://vbarindelli.github.io/wdd230/week05/weather.html",
+                    "title": "Weather API"
+                }
+            ]
+        }
+    ]
+}
