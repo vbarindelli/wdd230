@@ -53,53 +53,53 @@ localStorage.setItem("lastVisitDate", Date.now());
 // let tmps = document.querySelector("#timeS");
 // tmps.value = today;
 
+
+
+getMemberData(murl);
+
+
+const displayMembers = (members) => {
+    members.forEach((member) => {
+        let card = document.createElement('section');
+        let name = document.createElement('h3');
+        let memberImg = document.createElement('img');
+        let address = document.createElement('p');
+        let phone = document.createElement('p');
+        let memberUrl = document.createElement('a');
+
+        card.setAttribute('class', 'memberSection');
+        memberImg.setAttribute('src', member.image);
+        memberImg.setAttribute('alt', `corporate image of ${member.name}`);
+        memberImg.setAttribute('loading', 'lazy');
+        memberImg.setAttribute('width', '340');
+        memberImg.setAttribute('height', '440');
+        memberImg.setAttribute('class', 'memberImg');
+
+        memberUrl.setAttribute('id', 'cardUrl');
+
+        name.textContent = `${member.name}`
+        address.textContent = `${member.address}`;
+        phone.textContent = `${member.phone}`;
+        memberUrl.setAttribute('href', member.url);
+        memberUrl.innerText = `${member.url}`;
+
+        card.appendChild(memberImg);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(memberUrl);
+
+        cards.appendChild(card);
+    })
+}
+
 async function getMemberData(murl) {
     const response = await fetch(murl);
     const data = await response.json();
     console.table(data.members);
-    displayMembers(data.members);
-}
-
-getMemberData(murl);
-
-if (cards) {
-    const displayMembers = (members) => {
-        members.forEach((member) => {
-            let card = document.createElement('section');
-            let name = document.createElement('h3');
-            let memberImg = document.createElement('img');
-            let address = document.createElement('p');
-            let phone = document.createElement('p');
-            let memberUrl = document.createElement('a');
-
-            card.setAttribute('class', 'memberSection');
-            memberImg.setAttribute('src', member.image);
-            memberImg.setAttribute('alt', `corporate image of ${member.name}`);
-            memberImg.setAttribute('loading', 'lazy');
-            memberImg.setAttribute('width', '340');
-            memberImg.setAttribute('height', '440');
-            memberImg.setAttribute('class', 'memberImg');
-
-            memberUrl.setAttribute('id', 'cardUrl');
-
-            name.textContent = `${member.name}`
-            address.textContent = `${member.address}`;
-            phone.textContent = `${member.phone}`;
-            memberUrl.setAttribute('href', member.url);
-            memberUrl.innerText = `${member.url}`;
-
-            card.appendChild(memberImg);
-            card.appendChild(name);
-            card.appendChild(address);
-            card.appendChild(phone);
-            card.appendChild(memberUrl);
-
-            cards.appendChild(card);
-
-
-        })
+    if (cards) {
+        displayMembers(data.members);
     }
-
 }
 if (gridbutton) {
     gridbutton.addEventListener("click", () => {
