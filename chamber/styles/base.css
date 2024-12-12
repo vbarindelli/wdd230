@@ -11,6 +11,7 @@
     --shadow: hsl(0, 0%, 50%);
     --zebra: hsl(0, 0%, 93%, 1);
     --borderRadius: 6px;
+    --back3: #F8A31A;
 }
 
 main {
@@ -22,7 +23,7 @@ main {
 }
 
 header {
-    background-color: #F8A31A;
+    background-color: var(--back3);
     padding-top: 2em;
 
 }
@@ -84,6 +85,7 @@ nav {
 
 a:hover {
     background-color: rgb(189, 55, 55);
+    color: beige;
 }
 
 .show li {
@@ -114,7 +116,7 @@ picture img {
 
 
 footer {
-    background-color: #272635;
+    background-color: var(--back);
     padding: 1em;
     color: beige;
     text-align: center;
@@ -171,6 +173,7 @@ a {
     font-weight: 700;
     transition: 0.5s;
     font-size: clamp(1rem, 2vmin, 1.5rem);
+    overflow-wrap: break-word;
 }
 
 .interest {
@@ -217,7 +220,7 @@ label {
     color: beige;
     padding: 0 .5rem;
     text-align: left;
-    border: 1px solid#272635;
+    border: 1px solid var(--back);
     border-radius: var(--borderRadius);
     background-color: var(--back);
     font-size: larger;
@@ -349,6 +352,7 @@ main {
     border-radius: var(--borderRadius);
     text-align: center;
     max-width: 400px;
+
 }
 
 #gridList {
@@ -440,13 +444,38 @@ img {
 
 .memberSection a {
     font-size: 0.85rem;
-    color: blue;
     letter-spacing: 1.1pt;
     margin: 0;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 #directory img {
     height: 75px;
     max-width: 100%;
+}
+
+#cardUrl {
+    overflow-wrap: break-word;
+    background: pink;
+}
+
+/* 
+---------------------------------
+--------------------------------- */
+
+
+.cta-button {
+    border: none;
+    border-radius: 3em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    width: auto;
+    background-color: var(--back);
+    color: #fff !important;
+}
+
+.cta-button:hover {
+    background-color: #777;
 }

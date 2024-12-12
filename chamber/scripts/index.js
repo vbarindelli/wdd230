@@ -2,13 +2,16 @@ const year = document.querySelector("#currentyear");
 const today = new Date();
 const msToDays = 86400000;
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-const url = 'https://vbarindelli.github.io/wdd230/chamber/data/members.json';
+const murl = 'https://vbarindelli.github.io/wdd230/chamber/data/members.json';
 const cards = document.querySelector('.cards');
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
 
-
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
 
 
 const lastModified = document.querySelector("#lastModified");
@@ -50,62 +53,93 @@ localStorage.setItem("lastVisitDate", Date.now());
 // let tmps = document.querySelector("#timeS");
 // tmps.value = today;
 
-async function getMemberData(url) {
-    const response = await fetch(url);
+async function getMemberData(murl) {
+    const response = await fetch(murl);
     const data = await response.json();
     console.table(data.members);
     displayMembers(data.members);
 }
 
-getMemberData(url);
+getMemberData(murl);
 
-const displayMembers = (members) => {
-    members.forEach((member) => {
-        let card = document.createElement('section');
-        let name = document.createElement('h3');
-        let memberImg = document.createElement('img');
-        let address = document.createElement('p');
-        let phone = document.createElement('p');
-        let memberUrl = document.createElement('a');
+if (cards) {
+    const displayMembers = (members) => {
+        members.forEach((member) => {
+            let card = document.createElement('section');
+            let name = document.createElement('h3');
+            let memberImg = document.createElement('img');
+            let address = document.createElement('p');
+            let phone = document.createElement('p');
+            let memberUrl = document.createElement('a');
 
-        card.setAttribute('class', 'memberSection');
-        memberImg.setAttribute('src', member.image);
-        memberImg.setAttribute('alt', `corporate image of ${member.name}`);
-        memberImg.setAttribute('loading', 'lazy');
-        memberImg.setAttribute('width', '340');
-        memberImg.setAttribute('height', '440');
-        memberImg.setAttribute('class', 'memberImg');
+            card.setAttribute('class', 'memberSection');
+            memberImg.setAttribute('src', member.image);
+            memberImg.setAttribute('alt', `corporate image of ${member.name}`);
+            memberImg.setAttribute('loading', 'lazy');
+            memberImg.setAttribute('width', '340');
+            memberImg.setAttribute('height', '440');
+            memberImg.setAttribute('class', 'memberImg');
 
-        memberUrl.setAttribute('id', 'cardUrl');
+            memberUrl.setAttribute('id', 'cardUrl');
 
-        name.textContent = `${member.name}`
-        address.textContent = `${member.address}`;
-        phone.textContent = `${member.phone}`;
-        memberUrl.setAttribute('href', member.url);
-        memberUrl.innerText = `${member.url}`;
+            name.textContent = `${member.name}`
+            address.textContent = `${member.address}`;
+            phone.textContent = `${member.phone}`;
+            memberUrl.setAttribute('href', member.url);
+            memberUrl.innerText = `${member.url}`;
 
-        card.appendChild(memberImg);
-        card.appendChild(name);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(memberUrl);
+            card.appendChild(memberImg);
+            card.appendChild(name);
+            card.appendChild(address);
+            card.appendChild(phone);
+            card.appendChild(memberUrl);
 
-        cards.appendChild(card);
+            cards.appendChild(card);
 
 
+        })
+    }
+
+}
+if (gridbutton) {
+    gridbutton.addEventListener("click", () => {
+        // example using arrow function
+        cards.classList.add("grid");
+        cards.classList.remove("list");
     })
+};
+
+if (listbutton) {
+    listbutton.addEventListener("click", showList); // example using defined function
+
+    function showList() {
+        cards.classList.add("list");
+        cards.classList.remove("grid");
+    }
 }
 
-gridbutton.addEventListener("click", () => {
-    // example using arrow function
-    cards.classList.add("grid");
-    cards.classList.remove("list");
-});
-
-listbutton.addEventListener("click", showList); // example using defined function
-
-function showList() {
-    cards.classList.add("list");
-    cards.classList.remove("grid");
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
 
+apiFetch();
+
+function displayResults(data) {
+    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = `${desc}`;
+}
