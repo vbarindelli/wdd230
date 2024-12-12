@@ -76,6 +76,8 @@ const displayMembers = (members) => {
         memberImg.setAttribute('height', '440');
         memberImg.setAttribute('class', 'memberImg');
 
+        memberUrl.setAttribute('id', 'cardUrl');
+
         name.textContent = `${member.name}`
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;

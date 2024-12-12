@@ -1,0 +1,75 @@
+@media screen and (min-width: 1020px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .memberSection {
+        margin: 0.25rem;
+        padding: 1.5rem;
+        background-color: #eee;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 250px;
+    }
+
+
+    .grid section {
+        margin: 0.25rem;
+        padding: 1.5rem;
+        background-color: #eee;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 250px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        align-items: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list section {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        margin: 0;
+        padding: 0.25rem;
+        background-color: #eee;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+    }
+
+}

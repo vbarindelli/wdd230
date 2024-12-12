@@ -26,6 +26,60 @@
             "image": "https://img.freepik.com/vector-gratis/logo-abstracto-forma-llama_1043-44.jpg",
             "level": "Bronze",
             "area": "Haberdashery"
+        },
+        {
+            "name": "Bla",
+            "address": "New Av. 1234 Tw Argentina",
+            "phone": "54 11 3445 2352",
+            "url": "https://www.instagram.com/lenceriailusiones.trelew/",
+            "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324",
+            "level": "Gold",
+            "area": "Apparel"
+        },
+        {
+            "name": "Papeleria Delphi",
+            "address": " Av. Plutarco, 6, Puerto de la Torre, 29010 Málaga",
+            "phone": "663 13 97 38",
+            "url": "https://www.instagram.com/delphipapeleria/?hl=es",
+            "image": "https://png.pngtree.com/png-clipart/20190604/original/pngtree-creative-company-logo-png-image_1197025.jpg",
+            "level": "Silver",
+            "area": "Stationary"
+        },
+        {
+            "name": "Mercería De Mil Labores",
+            "address": "C. Píndaro, 7, local 3, Puerto de la Torre, 29010 Málaga",
+            "phone": "951 13 25 67",
+            "url": "https://www.facebook.com/profile.php?id=100061828157350",
+            "image": "https://img.freepik.com/vector-gratis/logo-abstracto-forma-llama_1043-44.jpg",
+            "level": "Bronze",
+            "area": "Haberdashery"
+        },
+        {
+            "name": "Ilusiones",
+            "address": "New Av. 1234 Tw Argentina",
+            "phone": "54 11 3445 2352",
+            "url": "https://www.instagram.com/lenceriailusiones.trelew/",
+            "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324",
+            "level": "Gold",
+            "area": "Apparel"
+        },
+        {
+            "name": "Papeleria Delphi",
+            "address": " Av. Plutarco, 6, Puerto de la Torre, 29010 Málaga",
+            "phone": "663 13 97 38",
+            "url": "https://www.instagram.com/delphipapeleria/?hl=es",
+            "image": "https://png.pngtree.com/png-clipart/20190604/original/pngtree-creative-company-logo-png-image_1197025.jpg",
+            "level": "Silver",
+            "area": "Stationary"
+        },
+        {
+            "name": "Mercería De Mil Labores",
+            "address": "C. Píndaro, 7, local 3, Puerto de la Torre, 29010 Málaga",
+            "phone": "951 13 25 67",
+            "url": "https://www.facebook.com/profile.php?id=100061828157350",
+            "image": "https://img.freepik.com/vector-gratis/logo-abstracto-forma-llama_1043-44.jpg",
+            "level": "Bronze",
+            "area": "Haberdashery"
         }
     ]
 }

@@ -1,0 +1,202 @@
+:root {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    --back2: rgb(189, 55, 55);
+    --back: #272635;
+    --foredark: hsla(0, 0%, 10%, 1);
+    --forelight: hsla(0, 0%, 100%, 1);
+    --border: hsla(0, 0%, 20%, .8);
+    --borderlight: hsla(0, 0%, 33%, .3);
+    --shadow: hsl(0, 0%, 50%);
+    --zebra: hsl(0, 0%, 93%, 1);
+}
+
+main {
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #F8A31A;
+    padding-top: 2em;
+
+}
+
+h1 {
+    margin-left: 1em;
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
+    font-size: 4em;
+    font-style: normal;
+    text-align: center;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: .5rem .75rem;
+    color: black;
+}
+
+#menu::before {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    content: "☰";
+}
+
+
+nav {
+    width: 600px;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    color: black;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+a:hover {
+    background-color: rgb(189, 55, 55);
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    content: "\00d7";
+}
+
+/* ------------------ */
+/* ------------------ */
+
+#gridList {
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #bed;
+    text-align: center;
+}
+
+#gridList button {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+
+img {
+    width: auto;
+    max-width: 325px;
+    box-shadow: 0 0 30px #777;
+    height: 200px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0.3em;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.grid section {
+    margin: auto;
+    padding: 1.5rem;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #333;
+}
+
+.grid section>* {
+    margin: 0.1rem;
+}
+
+.grid h3 {
+    font-family: "Caveat", cursive;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section {
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.list section>* {
+    margin: 0 1rem;
+}
+
+.list section img {
+    display: none;
+    /* smaller viewports only */
+}
+
+.list section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+    background-color: #bed;
+}
+
+.memberSection h3 {
+    font-size: 1.5rem;
+}
+
+.memberSection p {
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.memberSection a {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: blue;
+    letter-spacing: 1.1pt;
+    margin: 1em;
+}
+
+img {
+    height: 75px;
+    max-width: 100%;
+    /* Images are jerks - Seattle*/
+}
