@@ -393,7 +393,7 @@ img {
     border: 1px solid #bbb;
     border-radius: var(--borderRadius);
     text-align: center;
-    max-width: 400px;
+    width: 100%;
 }
 
 .grid img {
@@ -456,7 +456,7 @@ img {
 
 #cardUrl {
     overflow-wrap: break-word;
-    
+
 }
 
 /* 
