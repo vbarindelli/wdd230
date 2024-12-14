@@ -2,19 +2,27 @@ const year = document.querySelector("#currentyear");
 const today = new Date();
 const day = today.getDay();
 const msToDays = 86400000;
-year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 const murl = 'https://vbarindelli.github.io/wdd230/chamber/data/members.json';
 const cards = document.querySelector('.cards');
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const day1 = document.querySelector('#day1');
+const day2 = document.querySelector('#day2');
+const day3 = document.querySelector('#day3');
+const forecast1 = document.querySelector('#forecast1');
+const forecast2 = document.querySelector('#forecast2');
+const forecast3 = document.querySelector('#forecast3');
+
 
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 
+year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
-const url = "https://api.openweathermap.org/data/2.5/weather?lat=36.71&lon=4.42&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
-const forecastUrl = "https://api.openweathermap.org/data/3.0/onecall?lat=49.75&lon=6.64&exclude=minutely,hourly,alerts&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=36.71&lon=4.48&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
+const forecastUrl = "https://api.openweathermap.org/data/3.0/onecall?lat=36.71&lon=4.42&exclude=minutely,hourly,alerts&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
 
 const lastModified = document.querySelector("#lastModified");
 let modified = new Date(document.lastModified);
@@ -120,12 +128,21 @@ if (listbutton) {
     }
 }
 
+
+if (day == 0 || day == 4 || day == 5 || day == 6) {
+    document.querySelector(".banner").setAttribute('id', 'hide');
+}
+
+
+document.querySelector(".bannerClose").addEventListener("click", function () {
+    this.closest(".banner").setAttribute('id', 'hide');
+})
+
 async function apiFetch() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(forecastUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayResults(data);
         } else {
             throw Error(await response.text());
@@ -137,19 +154,15 @@ async function apiFetch() {
 
 apiFetch();
 
+
 function displayResults(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    let desc = data.weather[0].description;
+    currentTemp.innerHTML = `${data.current.temp}&deg;F`;
+    const iconsrc = `https://openweathermap.org/img/w/${data.current.weather[0].icon}.png`;
+    let desc = data.current.weather[0].description;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
     captionDesc.textContent = `${desc}`;
+    forecast1.innerHTML = `${data.daily[1].temp.day}&deg;F`;
+    forecast2.innerHTML = `${data.daily[2].temp.day}&deg;F`;
+    forecast3.innerHTML = `${data.daily[3].temp.day}&deg;F`;
 }
-console.log(day);
-if (day == 0 || day == 4 || day == 5 || day == 6) {
-    document.querySelector(".banner").setAttribute('id', 'hide');
-}
-
-document.querySelector(".bannerClose").addEventListener("click", function () {
-    this.closest(".banner").setAttribute('id', 'hide');
-})
