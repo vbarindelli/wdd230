@@ -7,12 +7,12 @@ const cards = document.querySelector('.cards');
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const day1 = document.querySelector('#day1');
-const day2 = document.querySelector('#day2');
-const day3 = document.querySelector('#day3');
 const forecast1 = document.querySelector('#forecast1');
 const forecast2 = document.querySelector('#forecast2');
 const forecast3 = document.querySelector('#forecast3');
+const featured1 = document.querySelector('#featured1');
+const featured2 = document.querySelector('#featured2');
+const featured3 = document.querySelector('#featured3');
 
 
 const currentTemp = document.querySelector('#current-temp');
@@ -100,13 +100,19 @@ const displayMembers = (members) => {
         card.appendChild(memberUrl);
 
         cards.appendChild(card);
+
+        if (member.level == "silver" || member.level == "gold") {
+            featured1.appendChild(card);
+        }
     })
+
+
 }
 
 async function getMemberData(murl) {
     const response = await fetch(murl);
     const data = await response.json();
-    console.table(data.members);
+    // console.table(data.members);
     if (cards) {
         displayMembers(data.members);
     }
@@ -166,3 +172,7 @@ function displayResults(data) {
     forecast2.innerHTML = `${data.daily[2].temp.day}&deg;F`;
     forecast3.innerHTML = `${data.daily[3].temp.day}&deg;F`;
 }
+
+
+
+

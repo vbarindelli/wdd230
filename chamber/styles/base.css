@@ -125,6 +125,20 @@ footer {
     border: none;
 }
 
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 98%;
+    height: auto;
+    max-width: 100%;
+}
+
+hr {
+    margin: 1em;
+}
+
 /* -------------------------------------------------------------
 ------------------------------------------------------------- */
 
@@ -163,19 +177,12 @@ body {
     display: none;
 }
 
-#mainImg {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 1em;
-    margin: 0 auto 0 auto;
-    max-width: 80%;
-}
+
 
 
 .cta-button {
     position: absolute;
-    top: 16em;
+    top: 300px;
     border: none;
     border-radius: 3em;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -193,7 +200,7 @@ body {
 
 .weather {
     display: block;
-    align-items: center;
+    text-align: center;
 }
 
 #weather-icon {
