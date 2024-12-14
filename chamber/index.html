@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+
     <header>
         <h1>Andalucia Chamber of Commerce</h1>
         <a id="menu" href="#"></a>
@@ -38,36 +40,59 @@
         </nav>
     </header>
     <main>
+        <div class="banner">
+            <div class="bannerContent">
+                <div class="bannerText">
+                    <strong>You are invited!</strong> Join the chamber of commerce meet and greet on Wednesday at 7:00
+                    p.m.
+                </div>
+                <button class="bannerClose" type="button">
+                    <span class="material-icons">
+                        close
+                    </span>
+                </button>
+            </div>
+        </div>
         <div class="container">
             <picture>
                 <source media="(min-width: 600px)" srcset="images/large-andalucia.webp">
-                <img src="images/small-andalucia.webp" alt="Andalucia province in Spain map" loading="lazy"
+                <img id="mainImg" src="images/small-andalucia.webp" alt="Andalucia province in Spain map" loading="lazy"
                     width="1020">
             </picture>
-            <section class="events">
-                <h2>Current Events</h2>
-                <p>Video provides a powerful way to help you prove your point. When you click Online Video, you can
-                    paste in the embed code for the video you want to add. You can also type a keyword to search online
-                    for the video that best fits your document.
-                </p>
-            </section>
-            <section class="weather">
-                <h2>Weather</h2>
-                <p>The current temperature in Malaga, Spain is <span id="current-temp"></span></span></p>
-                <figure>
-                    <img id="weather-icon" src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-                <p> Three day temperature forecast
-                    <span id="forecast"></span>
-                </p>
-            </section>
             <div class="button-wrapper">
                 <a class="cta-button" href="https://vbarindelli.github.io/wdd230/chamber/join.html">Join the
                     Chamber!</a>
             </div>
+            <section class="events">
+                <h2>Current Events</h2>
+                <p>In Calle Larios, the lights and music shows are staged at 6.30pm, 8pm and 10pm (except 24 and 31
+                    December).
+                    The festive decorations in the city centre can be enjoyed between 6.30pm and midnight on Mondays,
+                    Tuesdays, Wednesdays and Sundays.
+                </p>
+            </section>
+            <section>
+                <h2>Weather</h2>
+                <div class="weather">
+
+                    <figure id="weatherFig">
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption id="weatherCap"></figcaption>
+                    </figure>
+                    <p>The current temperature in Malaga, Spain is <span id="current-temp"></span></span></p>
+                    <p> Three day temperature forecast:
+                        <span id="forecast"></span>
+                    </p>
+                </div>
+            </section>
+
             <section class="spotlights">
                 <h2>Spotlight Advertisements</h2>
+                <div class="featured">
+                    <section id="featured1"></section>
+                    <section id="featured2"></section>
+                    <section id="featured3"></section>
+                </div>
             </section>
         </div>
 

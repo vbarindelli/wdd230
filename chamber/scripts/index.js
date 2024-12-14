@@ -1,5 +1,6 @@
 const year = document.querySelector("#currentyear");
 const today = new Date();
+const day = today.getDay();
 const msToDays = 86400000;
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 const murl = 'https://vbarindelli.github.io/wdd230/chamber/data/members.json';
@@ -11,8 +12,9 @@ const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 
-const url = "https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
 
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=36.71&lon=4.42&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
+const forecastUrl = "https://api.openweathermap.org/data/3.0/onecall?lat=49.75&lon=6.64&exclude=minutely,hourly,alerts&appid=f5802e6878f8d1e3b7f6bf77fba44d13";
 
 const lastModified = document.querySelector("#lastModified");
 let modified = new Date(document.lastModified);
@@ -143,3 +145,11 @@ function displayResults(data) {
     weatherIcon.setAttribute('alt', desc);
     captionDesc.textContent = `${desc}`;
 }
+console.log(day);
+if (day == 0 || day == 4 || day == 5 || day == 6) {
+    document.querySelector(".banner").setAttribute('id', 'hide');
+}
+
+document.querySelector(".bannerClose").addEventListener("click", function () {
+    this.closest(".banner").setAttribute('id', 'hide');
+})
