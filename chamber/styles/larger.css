@@ -58,7 +58,7 @@
     .cta-button {
         position: absolute;
         top: -750px;
-      
+
     }
 
     picture img {
@@ -82,18 +82,6 @@
         grid-row: 1/3;
     }
 
-    .images img {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-    }
-
-
-    img:hover {
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0);
-    }
 
     #containerJoin {
         display: grid;
@@ -121,31 +109,6 @@
         margin: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        align-items: center;
-    }
-
-    .memberSection {
-        margin: 0.25rem;
-        padding: 1.5rem;
-        background-color: #eee;
-        border: 1px solid #bbb;
-        border-radius: 6px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 280px;
-    }
-
-    .grid section {
-        margin: 0.25rem;
-        padding: 1.5rem;
-        background-color: #eee;
-        border: 1px solid #bbb;
-        border-radius: 6px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 280px;
     }
 
     .grid {
