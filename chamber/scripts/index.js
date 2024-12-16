@@ -10,9 +10,11 @@ const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 const forecast1 = document.querySelector('#forecast1');
 const forecast2 = document.querySelector('#forecast2');
 const forecast3 = document.querySelector('#forecast3');
-const featured1 = document.querySelector('#featured1');
-const featured2 = document.querySelector('#featured2');
-const featured3 = document.querySelector('#featured3');
+
+const premium_cards = document.querySelector('.featured');
+// const featured1 = document.querySelector('#featured1');
+// const featured2 = document.querySelector('#featured2');
+// const featured3 = document.querySelector('#featured3');
 
 
 const currentTemp = document.querySelector('#current-temp');
@@ -98,16 +100,17 @@ const displayMembers = (members) => {
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(memberUrl);
-
-        cards.appendChild(card);
-
-        if (member.level == "silver" || member.level == "gold") {
-            featured1.appendChild(card);
+        if (cards) {
+            cards.appendChild(card);
+        }
+        if (premium_cards) {
+            premium_cards.appendChild(card);
         }
     })
 
-
 }
+
+
 
 async function getMemberData(murl) {
     const response = await fetch(murl);
@@ -116,7 +119,24 @@ async function getMemberData(murl) {
     if (cards) {
         displayMembers(data.members);
     }
+    if (premium_cards) {
+        var filtered_members = data.members.filter(function (member) {
+            return member.level == "Gold" ||
+                member.level == "Silver";
+        });
+        var randomized_members = [];
+        for (let i = 1; i < 4; i++) {
+            var item = filtered_members.random();
+            const index = filtered_members.indexOf(item);
+            if (index > -1) {
+                filtered_members.splice(index, 1);
+            }
+            randomized_members.push(item);
+        }
+        displayMembers(randomized_members);
+    }
 }
+
 if (gridbutton) {
     gridbutton.addEventListener("click", () => {
         // example using arrow function
