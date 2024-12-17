@@ -343,6 +343,7 @@ label {
 ------------------------------------------------------------- */
 #containerJoin {
     min-width: 400px;
+    text-align: left;
 }
 
 
@@ -375,6 +376,12 @@ label {
     padding-top: 1rem;
     color: var(--back2);
     font-size: .9rem;
+
+}
+
+.wf1 input[type="radio"] {
+
+    margin-right: 1em;
 }
 
 
