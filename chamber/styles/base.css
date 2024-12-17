@@ -115,6 +115,10 @@ h2 {
     font-style: normal;
 }
 
+.footerContainer {
+    margin: 1em;
+}
+
 footer {
     margin: 1em 0 0;
     background-color: var(--back);
@@ -151,7 +155,7 @@ hr {
 
 
 .active {
-    text-decoration:  overline;
+    text-decoration: overline;
 }
 
 /* -------------------------------------------------------------
@@ -477,18 +481,9 @@ p {
     margin: 0;
 }
 
-/* main {
-    margin-left: 2rem;
-} */
 
 /* -------------------------------
 ------------------------------- */
-
-#directory {
-    max-width: 2040px;
-    margin: auto;
-
-}
 
 
 .memberSection {
@@ -505,6 +500,7 @@ p {
 #gridList {
     margin: 1rem auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--borderRadius);
     padding: 0.5rem;
     background-color: var(--back2);
     text-align: center;
@@ -533,24 +529,6 @@ img {
     align-items: center;
 }
 
-/* .grid section {
-    margin: auto;
-    padding: 1.5rem;
-    background-color: #eee;
-    border: 1px solid #bbb;
-    border-radius: var(--borderRadius);
-    text-align: center;
-    width: 100%;
-} */
-
-/* .grid img {
-    border: 1px solid #fff;
-    box-shadow: 0 0 10px #333;
-}
-
-.grid section>* {
-    margin: 0.1rem;
-} */
 
 
 .list {

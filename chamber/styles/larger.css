@@ -35,7 +35,7 @@
 
     .featured .memberSection {
         min-width: 200px;
-        max-width: 200px;
+        max-width: 300px;
         min-height: 280px;
     }
 
@@ -126,7 +126,6 @@
     }
 
     #directory {
-        max-width: 1200px;
         margin: auto;
 
     }
@@ -139,7 +138,7 @@
     }
 
     .grid {
-        max-width: 1700px;
+        max-width: 1200px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
