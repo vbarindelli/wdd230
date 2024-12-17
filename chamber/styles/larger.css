@@ -83,7 +83,8 @@
     .container-discover {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-
+        margin-top: 2em;
+        ;
     }
 
     .images {
@@ -102,8 +103,8 @@
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out;
     }
-    
-    
+
+
     img:hover {
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
