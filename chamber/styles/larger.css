@@ -112,11 +112,23 @@
     }
 
     .grid {
-        max-width: 1200px;
+        max-width: 1700px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         align-items: center;
+    }
+
+    .grid section {
+        margin: auto;
+        padding: 1.5rem;
+        background-color: #eee;
+        border: 1px solid #bbb;
+        border-radius: var(--borderRadius);
+        text-align: center;
+        max-width: 300px;
+        min-width: 300px;
+        height: 250px;
     }
 
     .list {
