@@ -140,6 +140,11 @@ footer {
     /* max-width: 100%; */
 }
 
+.hero img:hover {
+    -webkit-filter: none;
+    filter: none;
+}
+
 hr {
     margin: 1em;
 }
@@ -206,8 +211,6 @@ body {
     left: 10px;
     border: none;
     border-radius: 3em;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    display: inline-block;
     font-size: 1em;
     padding: 1em 2em;
     width: auto;
