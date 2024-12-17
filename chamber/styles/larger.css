@@ -26,7 +26,7 @@
         position: relative;
         height: auto;
         display: grid;
-  
+
     }
 
     .featured {
@@ -109,7 +109,7 @@
     #benefits {
         display: inline-table;
         grid-column: 2/3;
-        align-items: right;
+
     }
 
     #directory {
