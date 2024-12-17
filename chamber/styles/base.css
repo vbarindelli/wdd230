@@ -16,9 +16,12 @@
 
 main {
     background-color: white;
-    max-width: 1200px;
+    max-width: 90%;
     min-width: 300px;
     margin: auto;
+    text-align: center;
+
+
 }
 
 header {
@@ -133,7 +136,7 @@ footer {
 .hero img {
     width: 98%;
     height: auto;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 hr {
@@ -150,6 +153,11 @@ body {
 
 .banner {
     background: deeppink;
+    text-align: center;
+    margin: auto;
+    width: 89%;
+    border-radius: var(--borderRadius);
+
 
 }
 
@@ -575,6 +583,6 @@ img {
 
 }
 
-/* 
+/*
 ---------------------------------
 --------------------------------- */
