@@ -110,6 +110,9 @@ const displayMembers = (members) => {
 
 }
 
+function get_random(list) {
+    return list[Math.floor((Math.random() * list.length))];
+}
 
 
 async function getMemberData(murl) {
@@ -126,7 +129,7 @@ async function getMemberData(murl) {
         });
         var randomized_members = [];
         for (let i = 1; i < 4; i++) {
-            var item = filtered_members.random();
+            var item = get_random(filtered_members);
             const index = filtered_members.indexOf(item);
             if (index > -1) {
                 filtered_members.splice(index, 1);
