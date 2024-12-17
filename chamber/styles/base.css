@@ -149,6 +149,11 @@ hr {
     margin: 1em;
 }
 
+
+.active {
+    text-decoration:  overline;
+}
+
 /* -------------------------------------------------------------
 ------------------------------------------------------------- */
 
@@ -303,18 +308,7 @@ a {
     box-shadow: 0 0 30px #333;
 }
 
-.images img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
 
-
-img:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
 
 .card {
     border: 5px solid rgba(5, 5, 5, 0.1);
