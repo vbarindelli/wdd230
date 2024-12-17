@@ -118,7 +118,7 @@ function get_random(list) {
 async function getMemberData(murl) {
     const response = await fetch(murl);
     const data = await response.json();
-    // console.table(data.members);
+ 
     if (cards) {
         displayMembers(data.members);
     }
