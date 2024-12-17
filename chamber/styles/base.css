@@ -85,9 +85,10 @@ nav {
     font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-a:hover {
+.navigation a:hover {
     background-color: rgb(189, 55, 55);
     color: beige;
+    border-radius: var(--borderRadius);
 }
 
 .show li {
@@ -152,7 +153,8 @@ body {
 }
 
 .banner {
-    background: deeppink;
+    background: var(--back2);
+    color: beige;
     text-align: center;
     margin: auto;
     width: 99%;
@@ -200,7 +202,8 @@ body {
 
 .cta-button {
     position: absolute;
-    top: 300px;
+    top: 50px;
+    left: 10px;
     border: none;
     border-radius: 3em;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -250,6 +253,7 @@ h3 {
     text-align: center;
 }
 
+
 #cardImg {
     max-width: 420px;
     border: 5px solid rgba(0, 0, 0, 0.1);
@@ -274,11 +278,17 @@ a {
     overflow-wrap: break-word;
 }
 
+.forecast {
+    display: flex;
+    max-width: fit-content;
+    margin: auto;
+}
+
 #forecast1,
 #forecast2,
 #forecast3 {
-    margin: 2em;
-    padding: 2em;
+    margin: 1em;
+    padding: 1em;
 }
 
 /* -------------------------------------------------------------
@@ -573,23 +583,24 @@ img {
 .memberSection p {
     font-weight: 600;
     font-size: smaller;
+    margin-bottom: 1em;
 }
 
 .memberSection a {
     font-size: 0.85rem;
     letter-spacing: 1.1pt;
-    margin: 0;
     overflow-wrap: break-word;
+}
+
+.memberSection a:hover {
+    color: rgb(189, 55, 55);
+
+    border-radius: var(--borderRadius);
 }
 
 #directory img {
     height: 75px;
     max-width: 100%;
-}
-
-#cardUrl {
-    overflow-wrap: break-word;
-
 }
 
 /*

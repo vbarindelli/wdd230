@@ -118,7 +118,7 @@ function get_random(list) {
 async function getMemberData(murl) {
     const response = await fetch(murl);
     const data = await response.json();
- 
+
     if (cards) {
         displayMembers(data.members);
     }
@@ -162,10 +162,11 @@ if (day == 0 || day == 4 || day == 5 || day == 6) {
     document.querySelector(".banner").setAttribute('id', 'hide');
 }
 
-
-document.querySelector(".bannerClose").addEventListener("click", function () {
-    this.closest(".banner").setAttribute('id', 'hide');
-})
+if (document.querySelector(".bannerClose")) {
+    document.querySelector(".bannerClose").addEventListener("click", function () {
+        this.closest(".banner").setAttribute('id', 'hide');
+    })
+}
 
 async function apiFetch() {
     try {
